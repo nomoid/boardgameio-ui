@@ -36,7 +36,7 @@ export default [
     input: 'packages/main.js',
     external: Object.keys(globals),
     output: [
-      { file: pkg.main, format: 'umd', name: 'BoardgameIO-UI', globals },
+      { file: pkg.main, format: 'cjs', globals },
       { file: pkg.module, format: 'es', globals },
     ],
     plugins: plugins.concat([
