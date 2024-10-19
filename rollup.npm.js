@@ -12,9 +12,17 @@ import tsPlugin from 'rollup-plugin-typescript2';
 
 const env = process.env.NODE_ENV;
 
+const external = [
+  ...Object.keys(pkg.dependencies),
+  'react',
+  'socket.io-client',
+];
+
+
 const plugins = [
   postcss(),
   babel({ exclude: '**/node_modules/**' }),
+  commonjs(),
   filesize(),
 ];
 
@@ -31,17 +39,15 @@ const globals = {
 };
 
 export default [
-  // UMD and ES versions.
+  // CJS and ES versions.
   {
     input: 'packages/main.js',
-    external: Object.keys(globals),
+    external,
     output: [
-      { file: pkg.main, format: 'cjs', globals },
-      { file: pkg.module, format: 'es', globals },
+      { file: pkg.main, format: 'cjs'},
+      { file: pkg.module, format: 'es'},
     ],
-    plugins: plugins.concat([
-      replace({ 'process.env.NODE_ENV': JSON.stringify(env) }),
-    ]),
+    plugins
   },
 
   // Browser minified version.
