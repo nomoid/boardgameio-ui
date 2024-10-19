@@ -1,5 +1,6 @@
 {
   "name": "@nomoid/boardgame.io-ui",
+  "version": "0.0.2",
   "type": "commonjs",
   "packageManager": "yarn@4.5.0",
   "devDependencies": {
@@ -100,7 +101,6 @@
     "dist/boardgameio-ui.min.js",
     "dist/boardgameio-ui.es.js"
   ],
-  "version": "0.0.1",
   "description": "boardgame.io UI library (WIP)",
   "repository": {
     "type": "git",
