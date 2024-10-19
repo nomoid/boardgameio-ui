@@ -1,5 +1,5 @@
 {
-  "name": "boardgame.io-ui",
+  "name": "@nomoid/boardgame.io-ui",
   "type": "commonjs",
   "packageManager": "yarn@4.5.0",
   "devDependencies": {
@@ -35,7 +35,7 @@
     "eslint-plugin-unicorn": "^6.0.1",
     "express": "^4.21.1",
     "generate-export-aliases": "^1.0.0",
-    "graceful-fs": "https://github.com/mekwall/node-graceful-fs.git#patch-1",
+    "graceful-fs": "git+https://github.com/mekwall/node-graceful-fs.git#patch-1",
     "husky": "^1.3.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.0.0",
@@ -99,5 +99,17 @@
     "dist/boardgameio-ui.js",
     "dist/boardgameio-ui.min.js",
     "dist/boardgameio-ui.es.js"
-  ]
+  ],
+  "version": "0.0.1",
+  "description": "boardgame.io UI library (WIP)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomoid/boardgameio-ui.git"
+  },
+  "author": "nomoid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nomoid/boardgameio-ui/issues"
+  },
+  "homepage": "https://github.com/nomoid/boardgameio-ui#readme"
 }
